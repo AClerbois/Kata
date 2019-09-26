@@ -1,0 +1,2 @@
+# Kata
+Resolution of Kata
