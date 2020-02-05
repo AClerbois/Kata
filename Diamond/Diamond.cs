@@ -4,19 +4,17 @@ namespace AClerbois.Kata
 {
     public class Diamond
     {
-        public static void Main()
+        public void Display(int number)
         {
             var maxRange = 9;
-            var n = 6;
-            for (int i = 1; i <= (n * 2); i++)
+            for (int i = 1; i < (number * 2); i++)
             {
-                var rest = i < n ? n - i : i - n;
-                var white = maxRange - n + rest;
-                Console.Write(new string (' ', white));
-                for (int j = 1; j <= n - rest; Console.Write(j++));
-                for (int k = n - rest - 1; k >= 1; Console.Write(k--));
-                Console.WriteLine();
+                var rest = i < number ? number - i : i - number;
+                var white = maxRange - number + rest;
+                Console.Write(new string(' ', white));
+                System.Console.WriteLine(Math.Pow(double.Parse(new string('1', number-rest)),2));
             }
+
         }
     }
 }
